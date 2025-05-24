@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { FormEvent } from 'react';
 
@@ -24,7 +24,10 @@ export function PrankFormComponent({
   return (
     <form onSubmit={onSubmit} className="space-y-6">
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-naruto-orange">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-naruto-orange"
+        >
           Mobile Legends Email
         </label>
         <input
@@ -37,13 +40,21 @@ export function PrankFormComponent({
           onChange={(e) => onEmailChange(e.target.value)}
           className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-naruto-orange focus:border-naruto-orange sm:text-sm text-white"
           placeholder="yourname@example.com"
-          aria-describedby={error && email.trim() === '' ? "email-error" : undefined}
+          aria-describedby={
+            error && email.trim() === '' ? 'email-error' : undefined
+          }
         />
       </div>
 
       <div>
-        <label htmlFor="password" className="block text-sm font-medium text-naruto-orange">
-          Password <span className="text-xs text-gray-400">(Don't worry, this is part of the prank!)</span>
+        <label
+          htmlFor="password"
+          className="block text-sm font-medium text-naruto-orange"
+        >
+          Password{' '}
+          <span className="text-xs text-gray-400">
+            (Don't worry, this is part of the prank!)
+          </span>
         </label>
         <input
           id="password"
