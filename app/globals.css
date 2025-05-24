@@ -19,3 +19,17 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.slick-slide {
+  line-height: 0 !important;
+}
+
+.slick-slide>div {
+  display: block !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.slick-slider {
+  margin-bottom: 0 !important;
+}
