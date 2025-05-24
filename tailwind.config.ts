@@ -11,6 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        naruto: {
+          orange: "#FF8C00",
+          darkblue: "#0A1D3E",
+        },
+        ml: {
+          blue: "#3A7DFF",
+          gold: "#FFD700",
+        },
       },
     },
   },
