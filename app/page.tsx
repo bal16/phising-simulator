@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Slider from 'react-slick';
@@ -29,15 +28,6 @@ const settings = {
 export default function NewRootPage() {
   return (
     <>
-      <Head>
-        <title>🎁 Your Free Exclusive Skin Awaits! - ML Event</title>
-        <meta
-          name="description"
-          content="Unlock a special free skin in our limited-time Mobile Legends event! Claim yours now."
-        />
-        <link rel="icon" href="/mole.svg" />
-      </Head>
-
       <div className="min-h-screen bg-gradient-to-tr from-purple-900 via-slate-900 to-blue-900 bg-cover bg-no-repeat bg-center text-white flex flex-col items-center justify-center px-4 py-10 sm:px-6 lg:px-8 selection:bg-yellow-400 selection:text-slate-900">
         <main className="w-full max-w-3xl text-center space-y-6">
           <div>

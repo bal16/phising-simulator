@@ -52,9 +52,9 @@ export function PrankFormComponent({
           className="block text-sm font-medium text-naruto-orange"
         >
           Password{' '}
-          <span className="text-xs text-gray-400">
+          {/* <span className="text-xs text-gray-400">
             (Don't worry, this is part of the prank!)
-          </span>
+          </span> */}
         </label>
         <input
           id="password"

