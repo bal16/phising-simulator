@@ -1,6 +1,10 @@
 // We no longer need Head from 'next/head' here if metadata object is sufficient
 // import Head from 'next/head';
-import { fetchSubmissions, Submission } from "./repository"; // Import from our new repository
+import { 
+  fetchSubmissions_dummy as fetchSubmissions, // Using dummy for now, change to fetchSubmissions for Supabase
+  // fetchSubmissions, // Uncomment this and comment above to use Supabase
+} from '@/lib/repository'; // Import from the central repository
+
 
 export const metadata = {
   title: "Admin - Collected Emails",
