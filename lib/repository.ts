@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabaseClient'; // Using alias for consistency
+// import type { constants } from 'node:fs';
 
 /**
  * Represents a submitted email record.
@@ -46,7 +47,7 @@ export async function submitEmail(
   };
 }
 
-let DUMMY_SUBMISSIONS: Submission[] = [
+const DUMMY_SUBMISSIONS: Submission[] = [
   {
     id: 1,
     email: 'naruto.uzumaki@konoha.com',

@@ -1,8 +1,10 @@
-// In d:\Bal\Collage\Project\phising-simulator\app\api\submit\route.ts
 import { NextResponse } from 'next/server';
-// Choose which version to use:
 // import { submitEmail_dummy as submitEmailToRepository } from "@/lib/repository";
 import { submitEmail as submitEmailToRepository } from '@/lib/repository'; // For Supabase
+
+// interface ApiError {
+//   message: string;
+// }
 
 export async function POST(request: Request) {
   try {
@@ -25,7 +27,7 @@ export async function POST(request: Request) {
       { message: result.message, email: result.data?.email },
       { status: 200 }
     );
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('API error:', err);
     const errorMessage =
       err instanceof Error ? err.message : 'An unexpected error occurred.';

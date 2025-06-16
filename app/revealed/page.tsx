@@ -1,4 +1,4 @@
-import Head from 'next/head'; // Optional: for specific metadata for this page
+// import Head from 'next/head'; // Optional: for specific metadata for this page
 import Link from 'next/link';
 
 // You can add metadata for SEO and social sharing
@@ -20,7 +20,7 @@ export default function RevealedPage() {
           
           <div className="text-left space-y-4 mb-8">
             <p className="text-lg">
-              You've just experienced a simulation of a <strong className="text-red-400">phishing attempt</strong>.
+              You&apos;ve just experienced a simulation of a <strong className="text-red-400">phishing attempt</strong>.
               The good news? Your password was <strong className="text-green-400">NOT</strong> saved or seen by anyone.
               This exercise was designed purely for educational purposes.
             </p>
@@ -33,10 +33,10 @@ export default function RevealedPage() {
 
             <h2 className="text-2xl font-semibold text-yellow-300 mt-6 mb-2">Key Takeaways for Your Security:</h2>
             <ul className="list-disc list-inside space-y-2 pl-4">
-              <li><strong className="text-yellow-200">Be Wary of "Too Good To Be True" Offers:</strong> Free exclusive items are a common lure.</li>
+              <li><strong className="text-yellow-200">Be Wary of &quot;Too Good To Be True&quot; Offers:</strong> Free exclusive items are a common lure.</li>
               <li><strong className="text-yellow-200">Check the URL:</strong> Always verify the website address. Is it the official site?</li>
               <li><strong className="text-yellow-200">Never Share Passwords:</strong> Reputable services will never ask for your password via email or unsecure forms for such promotions.</li>
-              <li><strong className="text-yellow-200">Use Unique, Strong Passwords:</strong> Don't reuse passwords across different sites.</li>
+              <li><strong className="text-yellow-200">Use Unique, Strong Passwords:</strong> Don&apos;t reuse passwords across different sites.</li>
               <li><strong className="text-yellow-200">Enable Two-Factor Authentication (2FA):</strong> This adds an extra layer of security to your accounts.</li>
             </ul>
 

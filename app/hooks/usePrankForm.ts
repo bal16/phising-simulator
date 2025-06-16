@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface UsePrankFormReturn {
   email: string;
@@ -48,8 +48,8 @@ export function usePrankForm(): UsePrankFormReturn {
       router.push(
         "https://sctrack.sendcloud.net/track/click2/eNptUMtKxDAA_Jdgb9k0r-ZxUxB_QiSkeXTjpml3kwoi_rt1V9CDMKeZYYaZZ0q4lBICAAGRXAmOtWJCE6MEo8pIqQdiGKUUVXcg2GjDsSGCH1IZl614fNeOYbJjk_fTbFNGbpkBxBAcW1trxx76_qLOFVn_imrr7bqm8pZaqH3HnnZyq820jj2-l2XLypxxDtp3VPxIPoQ1p3LaHfMyphxymELxt-A_YdfKaHMN30MwQZwjIikiGINfYYcYOeVDdDpyG4n3XrIQBQ90dNEPlN9c1bWLdSdU9y6Xl82jEhqAH5_wegvU-2P_7H75AoM1ZhI=.html"
       );
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "An unexpected error occurred.");
     } finally {
       setIsLoading(false);
     }
